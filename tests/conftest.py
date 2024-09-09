@@ -38,7 +38,7 @@ def browser_setting():
     browser.config.base_url = 'https://lamoda.ru'
     browser.config.window_width = 1920
     browser.config.window_height = 1080
-    browser.config.timeout = 10 
+    browser.config.timeout = 20
 
     # driver_options = webdriver.ChromeOptions()
     # driver_options.add_argument('--headless')
