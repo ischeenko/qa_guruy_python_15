@@ -3,7 +3,7 @@ import os
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from lamoda_tests.utils.attach import AttachmentType
+from lamoda_tests.utils import attach
 from dotenv import load_dotenv
 
 
@@ -17,7 +17,7 @@ def browser_setting():
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
-        "browserVersion": "100.0",
+        "browserVersion": "125.0",
         "selenoid:options": {
             "enableVNC": True,
             "enableVideo": True
