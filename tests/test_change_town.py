@@ -13,7 +13,7 @@ def test_change_town():
 
     change_town.open()
     change_town.click_geo()
-    change_town.close_pop_up()
+    # change_town.close_pop_up()
     change_town.choose_town('Казань')
     change_town.choose_button()
     change_town.should_town('Казань')
