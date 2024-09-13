@@ -5,27 +5,23 @@ from dotenv import load_dotenv
 
 
 class Authorization:
-    with allure.step('Открываем главную страницу'):
-        def open(self):
+    def open(self):
+        with allure.step('Открываем главную страницу'):
             browser.open('/')
-
-    with allure.step('Открываем модальное окно входа'):
-        def open_modal_window(self):
+    def open_modal_window(self):
+        with allure.step('Открываем модальное окно входа'):
             browser.element('.x-button').should(have.text('Войти')).click()
-
-    with allure.step('Заполняем почту'):
-        def fill_email(self):
+    def fill_email(self):
+        with allure.step('Заполняем почту'):
             browser.element('.input-material__input[type="text"]').type(
                 os.getenv('loginAuth'))
-
-    with allure.step('Заполняем пароль'):
-        def fill_password(self):
+    def fill_password(self):
+        with allure.step('Заполняем пароль'):
             browser.element('._iconShow_104pm_17').click()
             browser.element('.input-material__input[name="password"]').type(
                 os.getenv('passAuth'))
-
-    with allure.step('Кликаем кнопку войти'):
-        def submit(self):
+    def submit(self):
+        with allure.step('Кликаем кнопку войти'):
             browser.element('._submit_7r0bx_31').click()
 
 
